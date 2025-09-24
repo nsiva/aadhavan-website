@@ -237,15 +237,7 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(typeWriter, 1000);
     }
 
-    // Parallax effect for hero section
-    window.addEventListener('scroll', function() {
-        const scrolled = window.pageYOffset;
-        const parallax = document.querySelector('.hero');
-        if (parallax) {
-            const speed = scrolled * 0.5;
-            parallax.style.transform = `translateY(${speed}px)`;
-        }
-    });
+    // Removed parallax effect to fix scrolling issues
 
     // Counter animation for stats
     function animateCounters() {

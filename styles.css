@@ -28,7 +28,7 @@ body {
     width: 100%;
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
-    z-index: 1000;
+    z-index: 2000;
     padding: 1rem 0;
     transition: all 0.3s ease;
 }
@@ -100,6 +100,8 @@ body {
     padding-top: 80px;
     padding-bottom: 40px;
     color: white;
+    position: relative;
+    z-index: 0;
 }
 
 .hero-content {
@@ -193,6 +195,8 @@ body {
 .section {
     padding: 5rem 0;
     scroll-margin-top: 6rem;
+    position: relative;
+    z-index: 1;
 }
 
 #awards.section,
