@@ -241,40 +241,40 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Counter animation for stats
     function animateCounters() {
-        // Only animate SAT Score and Volunteer Hours (assume order: 0=Weighted GPA, 1=Unweighted GPA, 2=SAT, 3=Volunteer)
+        // Current order: 0=Weighted GPA, 1=Unweighted GPA, 2=Volunteer Hours, 3=Internship Hours
         const counters = document.querySelectorAll('.stat-number');
         const speed = 200;
 
-        // SAT Score (index 2)
+        // Volunteer Hours (index 2)
         if (counters[2]) {
-            const satTarget = parseInt(counters[2].getAttribute('data-target') || counters[2].textContent.replace(/\D/g, ''));
-            let satCurrent = 0;
-            const satIncrement = satTarget / speed;
-            const satTimer = setInterval(() => {
-                satCurrent += satIncrement;
-                if (satCurrent >= satTarget) {
-                    counters[2].textContent = satTarget;
-                    clearInterval(satTimer);
-                } else {
-                    counters[2].textContent = Math.ceil(satCurrent);
-                }
-            }, 1);
-        }
-
-        // Volunteer Hours (index 3)
-        if (counters[3]) {
             // Check if it ends with +
-            const hasPlus = counters[3].textContent.includes('+');
-            const volTarget = parseInt(counters[3].getAttribute('data-target') || counters[3].textContent.replace(/\D/g, ''));
+            const hasPlus = counters[2].textContent.includes('+');
+            const volTarget = parseInt(counters[2].getAttribute('data-target') || counters[2].textContent.replace(/\D/g, ''));
             let volCurrent = 0;
             const volIncrement = volTarget / speed;
             const volTimer = setInterval(() => {
                 volCurrent += volIncrement;
                 if (volCurrent >= volTarget) {
-                    counters[3].textContent = volTarget + (hasPlus ? '+' : '');
+                    counters[2].textContent = volTarget + (hasPlus ? '+' : '');
                     clearInterval(volTimer);
                 } else {
-                    counters[3].textContent = Math.ceil(volCurrent) + (hasPlus ? '+' : '');
+                    counters[2].textContent = Math.ceil(volCurrent) + (hasPlus ? '+' : '');
+                }
+            }, 1);
+        }
+
+        // Internship Hours (index 3)
+        if (counters[3]) {
+            const internTarget = parseInt(counters[3].getAttribute('data-target') || counters[3].textContent.replace(/\D/g, ''));
+            let internCurrent = 0;
+            const internIncrement = internTarget / speed;
+            const internTimer = setInterval(() => {
+                internCurrent += internIncrement;
+                if (internCurrent >= internTarget) {
+                    counters[3].textContent = internTarget;
+                    clearInterval(internTimer);
+                } else {
+                    counters[3].textContent = Math.ceil(internCurrent);
                 }
             }, 1);
         }
