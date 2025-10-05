@@ -369,6 +369,22 @@ body {
     text-align: center;
 }
 
+/* Media recognition links */
+.media-link {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+.media-link:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
