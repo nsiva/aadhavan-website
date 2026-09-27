@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a college portfolio website for Aadhavan Sivakumar built with vanilla HTML, CSS, and JavaScript. It's a static website showcasing academic achievements, athletic accomplishments, volunteer work, and personal profile information designed for college applications.
+This is a personal portfolio website for Aadhavan Sivakumar built with vanilla HTML, CSS, and JavaScript. It's a static single-page site showcasing projects, professional experience, education, and leadership, aimed at software engineering / AI-ML / cybersecurity internship recruiting.
 
 ## Technology Stack
 
@@ -43,14 +43,14 @@ This is a static website with no build process. To work with the code:
 
 ### Core Components
 
-1. **Single Page Application**: All content is in `index.html` with section-based navigation
+1. **Single Page Application**: All content is in `index.html` with section-based navigation. Section order is Hero -> About -> Skills -> Projects -> Experience -> Education -> Interests & Goals -> Leadership & Service -> Contact.
 2. **Responsive Design**: Mobile-first approach with breakpoints in `styles.css`
 3. **Photo Galleries**: Modal-based image viewer for portfolio images
 4. **Smooth Navigation**: Fixed navbar with smooth scrolling and section highlighting
 
 ### CSS Architecture
 
-- **CSS Custom Properties**: Color scheme defined in `:root` variables
+- **Literal Color Values**: No `:root` custom properties; colors are hex literals (see Color Customization below)
 - **Responsive Grid Systems**: Different grid layouts for various content types
 - **Animation System**: Intersection Observer API for fade-in animations
 - **Modal System**: Custom modal implementation for image galleries
@@ -71,20 +71,17 @@ This is a static website with no build process. To work with the code:
 - Ensure consistent naming and alt text
 
 ### Updating Personal Information
-- Contact details: Lines 584-595 in `index.html`
-- Bio and tagline: Lines 43-44 in `index.html`
-- Statistics: Lines 64-80 in `index.html`
+Search `index.html` by class rather than by line number:
+- Contact details: the `.contact-methods` and `.social-links` blocks in `#contact`
+- Bio and tagline: `.tagline`, `.bio`, and `.availability` in the hero `<header>`
+- Statistics: the `.stats` block in `#about`. A `.stat-number` animates on scroll only if it has a
+  `data-count` attribute; use `.stat-number-text` for non-numeric values.
 
 ### Color Customization
-Modify CSS custom properties in `styles.css` (typically around line 131):
-```css
-:root {
-    --primary-color: #3498db;
-    --secondary-color: #9b59b6;
-    --text-color: #2c3e50;
-    --light-bg: #f8f9fa;
-}
-```
+There are no CSS custom properties in this project -- colors are literal hex values throughout
+`styles.css`. The recurring ones are `#3498db` (primary blue), `#9b59b6` (purple accent, used in
+gradients), `#2c3e50` (heading text), and `#f8f9fa` (light section background). Changing the
+scheme requires a find-and-replace across `styles.css`.
 
 ## Browser Compatibility
 
