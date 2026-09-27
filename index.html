@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aadhavan Sivakumar - College Portfolio</title>
+    <title>Aadhavan Sivakumar</title>
+    <meta name="description" content="Aadhavan Sivakumar - Computer Science student at Purdue University (Machine Intelligence &amp; Security tracks, Statistics minor), seeking Summer 2027 software engineering internships.">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -16,12 +17,11 @@
             </div>
             <div class="nav-menu">
                 <a href="#about" class="nav-link">About</a>
-                <a href="#academics" class="nav-link">Academics</a>
-                <a href="#athletics" class="nav-link">Athletics</a>
-                <a href="#volunteering" class="nav-link">Community Service</a>
-                <a href="#awards" class="nav-link">Achievements</a>
-                <!-- <a href="#internships" class="nav-link">Internships</a>
-                <a href="#awards" class="nav-link">Awards</a> -->
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#leadership" class="nav-link">Leadership</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
             <div class="hamburger">
@@ -36,14 +36,18 @@
         <div class="hero-content">
             <div class="profile-section">
                 <div class="profile-image">
-                    <img src="images/profile.jpeg" alt="Aadhavan Sivakumar" id="profilePhoto">
+                    <img src="images/profile.jpeg" alt="Portrait of Aadhavan Sivakumar" id="profilePhoto">
                 </div>
                 <div class="profile-text">
                     <h1>Aadhavan Sivakumar</h1>
-                    <p class="tagline">Aspiring Student Leader & Future Scholar</p>
-                    <p class="bio">Dedicated high school student passionate about academics, athletics, and community service. Committed to making a positive impact through leadership and excellence.</p>
+                    <p class="tagline">Purdue Computer Science &rsquo;30 &middot; Machine Intelligence &amp; Security</p>
+                    <p class="bio">Computer Science student at Purdue University on the Machine Intelligence and Security tracks, with a minor in Statistics. I build full-stack and data-driven software &mdash; most recently a Flask and PostgreSQL paper-trading platform with an AI research assistant.</p>
+                    <p class="availability">
+                        <span class="availability-item"><i class="fas fa-circle-check"></i> Open to Summer 2027 internships</span>
+                        <span class="availability-item"><i class="fas fa-map-marker-alt"></i> West Lafayette, IN</span>
+                    </p>
                     <div class="cta-buttons">
-                        <a href="#academics" class="btn btn-primary">View My Work</a>
+                        <a href="#projects" class="btn btn-primary">View Projects</a>
                         <a href="documents/aadhavan-sivakumar-resume.pdf" class="btn btn-secondary" target="_blank">
                             <i class="fas fa-download"></i> Resume
                         </a>
@@ -59,139 +63,107 @@
                 <h2 class="section-title">About Me</h2>
                 <div class="about-grid">
                     <div class="about-text">
-                        <p>I am a motivated high school student with a passion for learning, leadership, and community engagement. My journey combines academic excellence with athletic achievement and meaningful volunteer work.</p>
+                        <p>I am a Computer Science student at Purdue University, pursuing the Machine Intelligence and Security tracks alongside a minor in Statistics. My interest sits where machine learning meets software that people actually rely on &mdash; which means caring as much about correctness, data handling, and security as about the model itself.</p>
+                        <p>Outside of coursework I build and ship projects end to end, work with large real-world datasets through The Data Mine on Purdue&rsquo;s Anvil HPC cluster, and bring industry exposure from a software internship at Waters Corporation. I am currently seeking a Summer 2027 internship in software engineering, AI/ML, or cybersecurity.</p>
                         <div class="stats">
                             <div class="stat">
-                                <span class="stat-number">6.368/7.0</span>
-                                <span class="stat-label">WEIGHTED GPA</span>
+                                <span class="stat-number">2030</span>
+                                <span class="stat-label">Expected B.S. in CS</span>
                             </div>
                             <div class="stat">
-                                <span class="stat-number">3.68/4.0</span>
-                                <span class="stat-label">UNWEIGHTED GPA</span>
+                                <span class="stat-number stat-number-text">MI + Security</span>
+                                <span class="stat-label">Purdue CS Tracks</span>
                             </div>
                             <div class="stat">
-                                <span class="stat-number">350+</span>
-                                <span class="stat-label">Volunteer Hours</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat-number">120</span>
+                                <span class="stat-number" data-count="120">120</span>
                                 <span class="stat-label">Internship Hours</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number" data-count="350">350+</span>
+                                <span class="stat-label">Volunteer Hours</span>
                             </div>
                         </div>
                     </div>
                     <div class="skills">
-                        <h3>Key Strengths</h3>
+                        <h3>What I Bring</h3>
                         <div class="skill-tags">
-                            <span class="tag">Leadership</span>
-                            <span class="tag">Critical Thinking</span>
-                            <span class="tag">Team Collaboration</span>
-                            <span class="tag">Public Speaking</span>
-                            <span class="tag">Problem Solving</span>
-                            <span class="tag">Time Management</span>
+                            <span class="tag">Full-Stack Development</span>
+                            <span class="tag">Data Analysis</span>
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Secure Design</span>
+                            <span class="tag">Agile / Scrum</span>
+                            <span class="tag">Technical Communication</span>
                         </div>
                     </div>
                 </div>
-                
             </div>
         </section>
 
-        <section id="academics" class="section bg-light">
+        <section id="skills" class="section bg-light">
             <div class="container">
-                <h2 class="section-title">Academic Excellence</h2>
-                <div class="academics-content">
-                    <div class="achievements">
-                        <div class="achievement-card">
-                            <i class="fas fa-graduation-cap"></i>
-                            <h3>Academic Performance</h3>
-                            <p><strong>Weighted GPA:</strong> 6.368/7.0<br>
-                               <strong>Unweighted GPA:</strong> 3.68/4.0<br>
-                               <strong>Class Rank:</strong> No ranking available</p>
-                        </div>
-                        <div class="achievement-card">
-                            <i class="fas fa-chart-line"></i>
-                            <h3>AP Scholar Honors</h3>
-                            <p>Earned AP Scholar with Honors for high achievement on <strong>multiple AP exams.</strong></p>
-                        </div>
-                        <div class="achievement-card">
-                            <i class="fas fa-book"></i>
-                            <h3>Advanced Placement</h3>
-                            <p>Completed 6 AP courses with strong performance and currently enrolled in 3 more across multiple subjects.</p>
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="clubs-grid">
+                    <div class="club-item">
+                        <strong>Languages</strong>
+                        <div class="skill-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Java</span>
+                            <span class="tag">SQL / PostgreSQL</span>
+                            <span class="tag">HTML / CSS</span>
                         </div>
                     </div>
-                    
-                    <div class="coursework-section">
-                        <h3>Advanced Placement Coursework</h3>
-                        <div class="coursework-grid">
-                            <div class="course-item">
-                                <strong>AP Comp. Science Principles (2023)</strong> <br/><br/>
-                                <p>Computational thinking and programming fundamentals</p>
-                            </div>
-                            
-                            <div class="course-item">
-                                <strong>AP US History (2024)</strong> <br/><br/>
-                                <p>American historical analysis and document interpretation</p>
-                            </div>
-                            <div class="course-item">
-                                <strong>AP Physics (2024)</strong>
-                                <br/><br/>
-                                <p>Algebra, Dynamics and Kinematics</p>
-                            </div>
-
-                            <div class="course-item">
-                                <strong>AP Calculus AB (2025)</strong> <br/><br/>
-                                <p>Differential and integral calculus</p>
-                            </div>
-                            <div class="course-item">
-                                <strong>AP Biology (2025)</strong> <br/><br/>
-                                <p>Advanced biological concepts and laboratory work</p>
-                            </div>
-
-                            <div class="course-item">
-                                <strong>AP European History (2025)</strong>
-                                 <br/><br/>
-                                <p>European historical analysis and writing</p>
-                            </div>
-
-                            <div class="course-item">
-                                <strong>AP Statistics  (Ongoing)</strong> 
-                                 <br/><br/>
-                                <p>Statistical analysis and data interpretation</p>
-                            </div>
-                            
-                            <div class="course-item">
-                                <strong>AP Psychology (Ongoing)</strong> 
-                                 <br/><br/>
-                                <p>Psychological principles and human behavior</p>
-                            </div>
-                            <div class="course-item">
-                                <strong>AP Environmental Science (Ongoing)</strong>
-                                 <br/><br/>
-                                <p>Environmental systems and sustainability</p>
-                            </div>                            
+                    <div class="club-item">
+                        <strong>Frameworks &amp; Tools</strong>
+                        <div class="skill-tags">
+                            <span class="tag">Flask</span>
+                            <span class="tag">pandas</span>
+                            <span class="tag">Git</span>
+                            <span class="tag">Linux / Bash</span>
                         </div>
                     </div>
-                    
-                    <div class="photo-gallery">
-                        <h3>Academic Moments</h3>
-                        <div class="gallery-grid" id="academicGallery">
-                            <div class="gallery-item">
-                                <img src="images/academics/academic-book-award.jpeg" alt="Academic Honors">
-                                <div class="overlay">
-                                    <span>Book Award</span>
-                                </div>
-                            </div>
-                            <div class="gallery-item">
-                                <img src="images/academics/academic-honors.jpeg" alt="Academic Honors">
-                                <div class="overlay">
-                                    <span>Honor Society Certficate</span>
-                                </div>
-                            </div>
-                            <div class="gallery-item">
-                                <img src="images/academics/academic-book-cer.jpeg" alt="Academic Honors">
-                                <div class="overlay">
-                                    <span>Book Award Ceremony</span>
-                                </div>
-                            </div>
+                    <div class="club-item">
+                        <strong>Practices</strong>
+                        <div class="skill-tags">
+                            <span class="tag">Scrum</span>
+                            <span class="tag">Testing (pytest)</span>
+                            <span class="tag">Version Control</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title">Projects</h2>
+                <div class="featured-project">
+                    <div class="project-card project-card-featured">
+                        <span class="project-badge">Featured Project</span>
+                        <h3><i class="fas fa-chart-line"></i> Stock Trading Simulator with AI Assistant</h3>
+                        <p>A full-stack paper-trading application that lets users create accounts and trade stocks with virtual funds. Trades execute inside database transactions, so a position and its cash balance can never drift out of sync, and live market data comes from the Alpaca API. Authentication is handled through Authlib, a pytest suite covers the trading logic, and a shared operations layer backs both the web interface and a command-line client so both paths run the same validated code.</p>
+                        <p>The app also includes an AI &ldquo;Ask&rdquo; feature that explains a stock&rsquo;s historical price movements in plain language. It uses a deliberately security-conscious data flow: the client sends only a ticker symbol, while the server supplies all price, position, and history data &mdash; keeping account details off the client entirely. The feature is scoped to factual explanation, instructed to state uncertainty rather than guess, and never gives investment advice.</p>
+                        <div class="skill-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Flask</span>
+                            <span class="tag">PostgreSQL (Neon)</span>
+                            <span class="tag">Alpaca API</span>
+                            <span class="tag">Authlib</span>
+                            <span class="tag">pytest</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://stock-trading-simulator-3tyh.onrender.com/" target="_blank" rel="noopener" class="media-link"><i class="fas fa-up-right-from-square"></i> Live Demo</a>
+                            <a href="https://github.com/AadhavanSiva/Stock-Trading-Simulator-with-AI-Assistant" target="_blank" rel="noopener" class="media-link"><i class="fab fa-github"></i> Source Code</a>
+                        </div>
+                        <p class="project-note">Note: the live demo is hosted on a free tier, so it may take a moment to load on first visit.</p>
+                    </div>
+                    <div class="project-card project-card-featured">
+                        <h3><i class="fas fa-database"></i> Consumer Complaints Analysis &mdash; The Data Mine</h3>
+                        <p>An analysis of the Consumer Financial Protection Bureau (CFPB) consumer complaints dataset, carried out on Purdue&rsquo;s Anvil high-performance computing cluster through The Data Mine. I queried and cleaned a large real-world dataset to identify regional complaint patterns, then presented the findings to a non-technical audience.</p>
+                        <div class="skill-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">pandas</span>
+                            <span class="tag">SQL</span>
+                            <span class="tag">Anvil HPC</span>
                         </div>
                     </div>
                 </div>
@@ -201,312 +173,41 @@
             </div>
         </section>
 
-        <section id="athletics" class="section">
+        <section id="experience" class="section bg-light">
             <div class="container">
-                <h2 class="section-title">Athletic Achievements</h2>
-                <div class="athletics-content">
-                    <div class="sports-highlights">
-                        <div class="sport-card">
-                            <i class="fas fa-running"></i>
-                            <h3>Cross Country</h3>
-                            <p>Varsity team member competing at state levels</p>
-                            <span class="year">2023-2026</span>
-                        </div>
-                        <div class="sport-card">
-                            <i class="fas fa-stopwatch"></i>
-                            <h3>Track & Field</h3>
-                            <p>Distance runner with personal records in multiple events.</p>
-                            <span>2 Mile Personal Record: 11:50</span>
-                            <span class="year">2023-2026</span>
-                        </div>
-                        <div class="sport-card">
-                            <i class="fas fa-medal"></i>
-                            <h3>Athletic Leadership</h3>
-                            <p>Team captain and mentor for younger athletes</p>
-                            <span class="year">2025</span>
-                        </div>
-                    </div>
-                    <div class="photo-gallery">
-                        <h3>Athletic Moments</h3>
-                        <div class="gallery-grid" id="athleticsGallery">
-                            <div class="gallery-item">
-                                <img src="images/athletics/cross-country1.png" alt="Cross Country Competition">
-                                <div class="overlay">
-                                    <span>Cross Country Meet</span>
-                                </div>
-                            </div>
-                            <div class="gallery-item">
-                                <img src="images/athletics/cross-country2.png" alt="Cross Country Team">
-                                <div class="overlay">
-                                    <span>Team Training</span>
-                                </div>
-                            </div>
-                            <div class="gallery-item">
-                                <img src="images/athletics/cross-country3.png" alt="Cross Country Race">
-                                <div class="overlay">
-                                    <span>Race Day</span>
-                                </div>
-                            </div>
-                            <div class="gallery-item">
-                                <img src="images/athletics/cross-country4.png" alt="Cross Country Achievement">
-                                <div class="overlay">
-                                    <span>State Competition</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="back-to-top-container">
-                    <a href="#header" class="back-to-top"><i class="fas fa-arrow-up"></i> Back to Top</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="volunteering" class="section bg-light">
-            <div class="container">
-                <h2 class="section-title">Community Service</h2>
-                <div class="volunteering-content">
-                    <div class="service-highlights">
-                        <div class="service-card">
-                            <i class="fas fa-utensils"></i>
-                            <h3>Food Volunteer Service</h3>
-                            <p>Regular volunteer at local food bank.  Have completed over 250 hours of service, won Presidential Awards.</p>
-                            <span class="year">2022-2026</span>
-                        </div>
-                        <div class="service-card">
-                            <i class="fas fa-graduation-cap"></i>
-                            <h3>Shishu Bharati Education</h3>
-                            <p>Teaching and mentoring students in Indian culture and language.</p>
-                            <span class="year">2020-2026</span>
-                        </div>
-                        <div class="service-card">
-                            <i class="fas fa-chalkboard-teacher"></i>
-                            <h3>Remote Tutor</h3>
-                            <p>Developed and taught virtual grammar and vocabulary courses to improve students' linguistic skills.</p>
-                            <span class="year">2022-2023</span>
-                        </div>
-                    </div>
-                    <div class="photo-gallery">
-                        <h3>Food Volunteer Service</h3>
-                        <div class="gallery-grid" id="foodVolunteerGallery">
-                            <div class="gallery-item">
-                                <img src="images/volunteering/food-volunteer-pres-award.jpeg" alt="Food Volunteer Team">
-                                <div class="overlay">
-                                    <span>Presidential Award</span>
-                                </div>
-                            </div>
-                            <div class="gallery-item">
-                                <img src="images/volunteering/food-volunteer-award-cer.jpeg" alt="Food Volunteer Team">
-                                <div class="overlay">
-                                    <span>Award Ceremony</span>
-                                </div>
-                            </div>
-                            <div class="gallery-item">
-                                <img src="images/volunteering/food-volunteer-team.jpeg" alt="Food Volunteer Team">
-                                <div class="overlay">
-                                    <span>Volunteer Team</span>
-                                </div>
-                            </div>
-                            <div class="gallery-item">
-                                <img src="images/volunteering/food-volunteer1.jpeg" alt="Food Volunteer Service 1">
-                                <div class="overlay">
-                                    <span>Stocking Duty</span>
-                                </div>
-                            </div>
-                            <div class="gallery-item">
-                                <img src="images/volunteering/food-volunteer4.jpeg" alt="Food Volunteer Service 4">
-                                <div class="overlay">
-                                    <span>Package Loading</span>
-                                </div>
-                            </div>
-
-                            <div class="gallery-item">
-                                <img src="images/volunteering/food-volunteer2.jpeg" alt="Food Volunteer Service 2">
-                                <div class="overlay">
-                                    <span>Cart Hauling</span>
-                                </div>
-                            </div>
-                            <div class="gallery-item">
-                                <img src="images/volunteering/food-volunteer3.jpeg" alt="Food Volunteer Service 3">
-                                <div class="overlay">
-                                    <span>Delivery Cart</span>
-                                </div>
-                            </div>
-                            
-                            <div class="gallery-item">
-                                <img src="images/volunteering/food-volunteer5.jpeg" alt="Food Volunteer Service 5">
-                                <div class="overlay">
-                                    <span>Curbside Assist</span>
-                                </div>
-                            </div>
-                        </div>
-                        <br/><br/>
-                        <h3>Shishu Bharati Educational Service</h3>
-                            <div class="gallery-grid" id="shishuBharatiGallery">
-                                                        <div class="gallery-item">
-                                <img src="images/volunteering/shishu-bharati-cert-award.jpeg" alt="Shishu Bharati 3">
-                                <div class="overlay">
-                                    <span>Trophy Presentation</span>
-                                </div>
-                            </div>
-                            
-                            <div class="gallery-item">
-                                <img src="images/volunteering/shishu-bharati-cert-cer.jpeg" alt="Shishu Bharati 3">
-                                <div class="overlay">
-                                    <span>Diploma Gathering</span>
-                                </div>
-                            </div>
-
-                            <div class="gallery-item">
-                                <img src="images/volunteering/shishu-bharati4.jpeg" alt="Shishu Bharati 3">
-                                <div class="overlay">
-                                    <span>Language Festival</span>
-                                </div>
-                            </div>
-
-                            <div class="gallery-item">
-                                <img src="images/volunteering/shishu-bharati5.jpeg" alt="Shishu Bharati 3">
-                                <div class="overlay">
-                                    <span>Essay Winners</span>
-                                </div>
-                            </div>
-                            <div class="gallery-item">
-                                <img src="images/volunteering/shishu-bharati1.jpeg" alt="Shishu Bharati 1">
-                                <div class="overlay">
-                                    <span>Tamil Skills</span>
-                                </div>
-                            </div>
-                            <div class="gallery-item">
-                                <img src="images/volunteering/shishu-bharati2.jpeg" alt="Shishu Bharati 2">
-                                <div class="overlay">
-                                    <span>Language Booth</span>
-                                </div>
-                            </div>
-                            <div class="gallery-item">
-                                <img src="images/volunteering/shishu-bharati3.jpeg" alt="Shishu Bharati 3">
-                                <div class="overlay">
-                                    <span>Cultural Display</span>
-                                </div>
-                            </div>
-
-                            <div class="gallery-item">
-                                <img src="images/volunteering/shishu-bharati6.jpeg" alt="Shishu Bharati 3">
-                                <div class="overlay">
-                                    <span>Tamil Showcase</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="back-to-top-container">
-                    <a href="#header" class="back-to-top"><i class="fas fa-arrow-up"></i> Back to Top</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="awards" class="section bg-light">
-            <div class="container">
-                <h2 class="section-title">Awards and Commendations</h2>
-                <div class="awards-content">
-                    <div class="awards-grid">
-                        <div class="award-card">
-                            <i class="fas fa-trophy"></i>
-                            <h3>Academic Excellence Awards</h3>
-                            <div class="award-list">
-                                <div class="award-item">
-                                    <strong>High Honors Roll</strong> <span class="year">2023</span>
-                                    <p>Consistent academic performance with an average of 90 or higher</p>
-                                </div>
-                                <div class="award-item">
-                                    <strong>AP Scholar with Honors Award</strong> <span class="year">2025</span>
-                                    <p>Recognition for excellence in Advanced Placement coursework</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="award-card">
-                            <i class="fas fa-hands-helping"></i>
-                            <h3>Service Recognition</h3>
-                            <div class="award-list">
-                                <div class="award-item">
-                                    <strong>Presidential Award</strong> <span class="year">2023-2024</span>
-                                    <p>Presidential Volunteer Service Award for completing over 100 hours of service at Medway Food Pantry.</p>
-                                </div>
-                                <div class="award-item">
-                                    <strong>Community Service Award</strong> <span class="year">2024-2025</span>
-                                    <p>Recognition for outstanding volunteer service (200+ hours) from both educational and food pantry institutions.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="award-card">
-                            <i class="fas fa-medal"></i>
-                            <h3>Athletic Achievements</h3>
-                            <div class="award-list">
-                                <div class="award-item">
-                                    <strong>Cross Country Team Captain</strong> <span class="year">2025</span>
-                                    <p>Leadership role in varsity cross country team</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="award-card">
-                            <i class="fas fa-newspaper"></i>
-                            <h3>Media Recognition</h3>
-                            <div class="award-list">
-                                <div class="award-item">
-                                    <strong>Prestigious President's Volunteer Service Award</strong> <span class="year">2024</span>
-                                    <p>Featured on local town website news for outstanding volunteer service contributions.</p>
-                                    <a href="https://franklinobserver.town.news/g/franklin-town-ma/n/275122/students-honored-service-medway-food-pantry" target="_blank" class="media-link">Honored for Service to Medway Food Pantry</a>
-                                </div>
-                                <div class="award-item">
-                                    <strong>Community Facebook Recognition</strong> <span class="year">2025</span>
-                                    <p>A local radio station featured Aadhavan Sivakumar for his exceptional community impact, highlighting the leadership and commitment demonstrated in over 100 hours of volunteer service.</p>
-                                    <a href="https://www.facebook.com/story.php?story_fbid=1184811900348139&id=100064580206072&rdid=npVrswmr2RGVbrfK#" target="_blank" class="media-link">Myfm 101.3's Post</a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="internships" class="section">
-            <div class="container">
-                <h2 class="section-title">Professional Experience</h2>
+                <h2 class="section-title">Experience</h2>
                 <div class="internships-content">
                     <div class="internship-highlights">
                         <div class="internship-card">
                             <i class="fas fa-briefcase"></i>
-                            <h3>Summer Internship</h3>
-                            <p>Applied and earned a summer internship at a pharmaceutical and software company(Waters Corporation), learning about Scrum, effective development methods, and efficiency models.</p>
+                            <h3>Intern &mdash; Waters Corporation</h3>
+                            <p>Selected for a summer internship at Waters Corporation, an analytical instruments and software company in Milford, MA, where I studied Agile and Scrum development methodology and how engineering teams measure efficiency.</p>
                             <span class="year">Summer 2025</span>
                         </div>
                         <div class="internship-card">
                             <i class="fas fa-tasks"></i>
-                            <h3>Project Management</h3>
-                            <p>Created and delivered a comprehensive presentation on the Scrum project management process and ways to improve it for other interns and project managers.</p>
+                            <h3>Scrum Process Research</h3>
+                            <p>Researched the company&rsquo;s Scrum process, then built and delivered a presentation to fellow interns and project managers recommending specific improvements to how the team ran its sprints.</p>
                             <span class="year">Summer 2025</span>
                         </div>
                         <div class="internship-card">
                             <i class="fas fa-users"></i>
                             <h3>Team Collaboration</h3>
-                            <p>Worked closely with professional development teams to understand software development methodologies and efficiency models in a corporate environment.</p>
+                            <p>Worked alongside professional development teams to see how software is planned, reviewed, and shipped in a corporate environment, and how process decisions affect delivery.</p>
                             <span class="year">Summer 2025</span>
                         </div>
                     </div>
                     <div class="photo-gallery">
-                        <h3>Professional Moments</h3>
+                        <h3>Internship Moments</h3>
                         <div class="gallery-grid" id="internshipGallery">
                             <div class="gallery-item">
-                                <img src="images/internship/intern1.jpg" alt="Internship Experience 1">
+                                <img src="images/internship/intern1.jpg" alt="Aadhavan Sivakumar presenting his Scrum process research to interns and project managers at Waters Corporation">
                                 <div class="overlay">
                                     <span>Scrum Presentation</span>
                                 </div>
                             </div>
                             <div class="gallery-item">
-                                <img src="images/internship/intern2.jpg" alt="Internship Experience 2">
+                                <img src="images/internship/intern2.jpg" alt="Aadhavan Sivakumar with fellow interns during the Waters Corporation summer internship program">
                                 <div class="overlay">
                                     <span>Professional Development</span>
                                 </div>
@@ -517,119 +218,179 @@
             </div>
         </section>
 
-        <section id="projects" class="section">
+        <section id="education" class="section">
             <div class="container">
-                <h2 class="section-title">Independent Studies & Projects</h2>
-                <div class="projects-content">
-                    <div class="projects-grid">
-                        <div class="project-card">
-                            <i class="fas fa-university"></i>
-                            <h3>University of Michigan, Coursera</h3>
-                            <p>Data Science Technology course - Advanced data analysis, machine learning, and statistical modeling techniques</p>
-                            <span class="year">Summer 2023</span>
+                <h2 class="section-title">Education</h2>
+                <div class="academics-content">
+                    <div class="experience-card">
+                        <h4>Purdue University &mdash; West Lafayette, IN <span class="year">Expected May 2030</span></h4>
+                        <p>B.S. Computer Science &mdash; Machine Intelligence &amp; Security Tracks &middot; Minor in Statistics</p>
+                    </div>
+
+                    <div class="coursework-section">
+                        <h3>Relevant Coursework</h3>
+                        <div class="clubs-grid">
+                            <div class="course-item">
+                                <strong>CS 18000</strong> <span class="year">(Fall 2026)</span>
+                                <p>Problem Solving and Object-Oriented Programming in Java</p>
+                            </div>
+                            <div class="course-item">
+                                <strong>CS 19300</strong> <span class="year">(Fall 2026)</span>
+                                <p>Tools &mdash; Linux, the command line, Git, and the developer toolchain</p>
+                            </div>
+                            <div class="course-item">
+                                <strong>MA 16200</strong> <span class="year">(Fall 2026)</span>
+                                <p>Plane Analytic Geometry and Calculus II</p>
+                            </div>
+                            <div class="course-item">
+                                <strong>TDM 10100</strong> <span class="year">(Fall 2026)</span>
+                                <p>The Data Mine &mdash; data science methods applied to real-world datasets</p>
+                            </div>
                         </div>
-                        <div class="project-card">
-                            <i class="fas fa-robot"></i>
-                            <h3>Inspirit.ai - AI Course</h3>
-                            <p>Advanced artificial intelligence and machine learning modeling techniques with practical applications</p>
-                            <br/>
-                            <span class="year">Summer 2024</span>
-                        </div>
-                        <div class="project-card">
-                            <i class="fas fa-chart-pie"></i>
-                            <h3>Worcester State University</h3>
-                            <p>Personal Finance Course - Comprehensive study of financial planning, investment strategies, and economic principles</p>
-                            <span class="year">Summer 2025</span>
-                        </div>
-                        <div class="project-card">
-                            <i class="fas fa-code"></i>
-                            <h3>Software Development Projects</h3>
-                            <p>Various programming projects demonstrating technical skills and problem-solving abilities</p>
-                            <span class="year">2022-2026</span>
+                    </div>
+
+                    <div class="experience-card">
+                        <h4>The Data Mine &mdash; Purdue University <span class="year">2026 &ndash; Present</span></h4>
+                        <p>Member of Purdue&rsquo;s interdisciplinary data science learning community, working with large real-world datasets on the Anvil high-performance computing cluster and presenting findings to both technical and non-technical audiences.</p>
+                    </div>
+
+                    <div class="coursework-section">
+                        <h3>Earlier Coursework &amp; Recognition</h3>
+                        <div class="clubs-grid">
+                            <div class="course-item">
+                                <strong>AP Scholar with Honors</strong> <span class="year">(2025)</span>
+                                <p>College Board recognition for high achievement across multiple AP examinations</p>
+                            </div>
+                            <div class="course-item">
+                                <strong>University of Michigan / Coursera</strong> <span class="year">(Summer 2023)</span>
+                                <p>Independent study in data collection and cleaning with Python</p>
+                            </div>
+                            <div class="course-item">
+                                <strong>Inspirit AI</strong> <span class="year">(Summer 2024)</span>
+                                <p>Independent study in AI modeling fundamentals and applied machine learning</p>
+                            </div>
+                            <div class="course-item">
+                                <strong>Worcester State University</strong> <span class="year">(Summer 2025)</span>
+                                <p>Personal finance &mdash; financial planning, investment strategy, and economic principles</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="skills" class="section">
+        <section id="interests" class="section bg-light">
             <div class="container">
-                <h2 class="section-title">Clubs and Extracurricular Activities</h2>
-                <div class="clubs-section">
-                        <div class="clubs-grid">
-                            
-                            <div class="club-item">
-                                <strong>Math Club</strong> <span class="year">(2022-2026)</span>
-                                <p>Competed in mathematical competitions and problem-solving challenges</p>
+                <h2 class="section-title">Interests &amp; Goals</h2>
+                <div class="interests-text">
+                    <p>I am drawn to the point where machine learning stops being a demo and starts being something people can trust. My two CS tracks reflect that: Machine Intelligence for building systems that learn, and Security for making sure those systems can be defended rather than just demonstrated.</p>
+                    <p>Fintech is where both interests meet in practice. Building a paper-trading platform taught me that the hard parts are rarely the models &mdash; they are transactional correctness, keeping sensitive account data on the server, and being honest about what an AI feature does and does not know.</p>
+                    <p>Through my Statistics minor and The Data Mine, I am working toward a Summer 2027 internship where I can ship software that real people depend on, and learn from engineers who have already done it.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="leadership" class="section">
+            <div class="container">
+                <h2 class="section-title">Leadership &amp; Service</h2>
+                <div class="volunteering-content">
+                    <div class="service-highlights">
+                        <div class="service-card">
+                            <i class="fas fa-running"></i>
+                            <h3>Captain, Varsity Cross Country</h3>
+                            <p>Led the Medway High School varsity cross country team as captain, organizing summer training of 40+ miles per week and mentoring younger athletes through the season.</p>
+                            <span class="year">2025</span>
+                        </div>
+                        <div class="service-card">
+                            <i class="fas fa-award"></i>
+                            <h3>Presidential Volunteer Service Award</h3>
+                            <p>Recognized with the President&rsquo;s Volunteer Service Award for sustained service at the Medway Food Pantry, part of 350+ total volunteer hours across the food pantry and Shishu Bharati.</p>
+                            <div class="project-links">
+                                <a href="https://franklinobserver.town.news/g/franklin-town-ma/n/275122/students-honored-service-medway-food-pantry" target="_blank" rel="noopener" class="media-link"><i class="fas fa-newspaper"></i> Franklin Observer</a>
+                                <a href="https://www.facebook.com/story.php?story_fbid=1184811900348139&amp;id=100064580206072&amp;rdid=npVrswmr2RGVbrfK#" target="_blank" rel="noopener" class="media-link"><i class="fas fa-broadcast-tower"></i> Myfm 101.3</a>
                             </div>
-                            <div class="club-item">
-                                <strong>Debate Team</strong> <span class="year">(2022-2023)</span>
-                                <p>Developed public speaking and critical thinking skills</p>
-                                <p class="club-note">Note: Club discontinued by school in 2023</p>
-                            </div>
-                            <div class="club-item">
-                                <strong>Newspaper Club</strong> <span class="year">(2023-2026)</span>
-                                <p>Contributing writer and editor for school publications</p>
-                            </div>
-                            <div class="club-item">
-                                <strong>World of Differences Club</strong> <span class="year">(2024-2026)</span>
-                                <p>Promoting cultural diversity and inclusion within the school community</p>
-                            </div>
-                            <div class="club-item">
-                                <strong>National Honor Society</strong> <span class="year">(2024-2026)</span>
-                                <p>Recognized member for academic excellence and community service</p>
-                            </div>
-                            
+                            <span class="year">2022 &ndash; 2026</span>
+                        </div>
+                        <div class="service-card">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <h3>Team Leader, Shishu Bharati</h3>
+                            <p>Team leader for the Tamil and Refreshments departments at Shishu Bharati, teaching language and culture classes and coordinating volunteers for school-wide events.</p>
+                            <span class="year">2020 &ndash; 2026</span>
+                        </div>
+                        <div class="service-card">
+                            <i class="fas fa-user-graduate"></i>
+                            <h3>National Honor Society</h3>
+                            <p>Inducted member, selected for the combination of academic standing, leadership, and documented community service.</p>
+                            <span class="year">2024 &ndash; 2026</span>
                         </div>
                     </div>
+                    <div class="photo-gallery">
+                        <h3>Service Moments</h3>
+                        <div class="gallery-grid" id="serviceGallery">
+                            <div class="gallery-item">
+                                <img src="images/volunteering/food-volunteer-pres-award.jpeg" alt="Aadhavan Sivakumar receiving the President&rsquo;s Volunteer Service Award certificate for service at the Medway Food Pantry">
+                                <div class="overlay">
+                                    <span>Presidential Award</span>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="images/volunteering/food-volunteer-team.jpeg" alt="Aadhavan Sivakumar with the Medway Food Pantry volunteer team">
+                                <div class="overlay">
+                                    <span>Food Pantry Team</span>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="images/volunteering/food-volunteer1.jpeg" alt="Aadhavan Sivakumar sorting and stocking donated food on shelves at the Medway Food Pantry">
+                                <div class="overlay">
+                                    <span>Stocking Shelves</span>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="images/volunteering/shishu-bharati-cert-award.jpeg" alt="Aadhavan Sivakumar accepting a trophy for volunteer teaching at Shishu Bharati">
+                                <div class="overlay">
+                                    <span>Shishu Bharati Recognition</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="back-to-top-container">
                     <a href="#header" class="back-to-top"><i class="fas fa-arrow-up"></i> Back to Top</a>
                 </div>
-            </div>  
+            </div>
         </section>
-        
-        
 
-        <section id="contact" class="section">
+        <section id="contact" class="section bg-light">
             <div class="container">
                 <h2 class="section-title">Get In Touch</h2>
-                <div class="contact-content">
+                <div class="contact-content contact-content-single">
                     <div class="contact-info">
-                        <h3>Let's Connect</h3>
-                        <p>I'm always excited to discuss opportunities, share experiences, or connect with fellow students and educators.</p>
+                        <h3>Let&rsquo;s Connect</h3>
+                        <p>I am always glad to talk about internship opportunities, projects, or anything at the intersection of software, machine learning, and security.</p>
                         <div class="contact-methods">
                             <div class="contact-item">
                                 <i class="fas fa-envelope"></i>
-                                <span>AadhavanS2007@gmail.com</span>
+                                <a href="mailto:sivaku43@purdue.edu" class="contact-link">sivaku43@purdue.edu</a>
                             </div>
                             <div class="contact-item">
-                                <i class="fas fa-phone"></i>
-                                <span>(508) 345-2367</span>
+                                <i class="fab fa-github"></i>
+                                <a href="https://github.com/AadhavanSiva" target="_blank" rel="noopener" class="contact-link">github.com/AadhavanSiva</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fab fa-linkedin"></i>
+                                <a href="https://www.linkedin.com/in/aadhavan-sivakumar-b4a8123b9" target="_blank" rel="noopener" class="contact-link">linkedin.com/in/aadhavan-sivakumar</a>
                             </div>
                             <div class="contact-item">
                                 <i class="fas fa-map-marker-alt"></i>
-                                <span>Medway, MA</span>
+                                <span>West Lafayette, IN</span>
                             </div>
                         </div>
-                        <!-- <div class="social-links">
-                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                        </div> -->
-                    </div>
-                    <div class="contact-form">
-                        <form id="contactForm">
-                            <div class="form-group">
-                                <input type="text" id="name" name="name" placeholder="Your Name" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" id="email" name="email" placeholder="Your Email" required>
-                            </div>
-                            <div class="form-group">
-                                <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Send Message</button>
-                        </form>
+                        <div class="social-links">
+                            <a href="mailto:sivaku43@purdue.edu" class="social-link" aria-label="Email Aadhavan Sivakumar"><i class="fas fa-envelope"></i></a>
+                            <a href="https://github.com/AadhavanSiva" target="_blank" rel="noopener" class="social-link" aria-label="Aadhavan Sivakumar on GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/aadhavan-sivakumar-b4a8123b9" target="_blank" rel="noopener" class="social-link" aria-label="Aadhavan Sivakumar on LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="documents/aadhavan-sivakumar-resume.pdf" target="_blank" class="social-link" aria-label="Download Aadhavan Sivakumar&rsquo;s resume"><i class="fas fa-file-pdf"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -638,7 +399,7 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Aadhavan Sivakumar. All rights reserved.</p>
+            <p>&copy; 2026 Aadhavan Sivakumar. All rights reserved.</p>
         </div>
     </footer>
 

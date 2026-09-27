@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
 
     // Observe all sections and cards for fade-in effect
-    document.querySelectorAll('.section, .achievement-card, .sport-card, .service-card, .gallery-item').forEach(el => {
+    document.querySelectorAll('.section, .service-card, .internship-card, .project-card, .club-item, .course-item, .experience-card, .gallery-item').forEach(el => {
         el.classList.add('fade-in');
         observer.observe(el);
     });
@@ -120,46 +120,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Contact form handling
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(contactForm);
-            const name = formData.get('name');
-            const email = formData.get('email');
-            const message = formData.get('message');
-            
-            // Simple validation
-            if (!name || !email || !message) {
-                alert('Please fill in all fields.');
-                return;
-            }
-            
-            // Email validation
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email)) {
-                alert('Please enter a valid email address.');
-                return;
-            }
-            
-            // Simulate form submission
-            const submitBtn = contactForm.querySelector('button[type="submit"]');
-            const originalText = submitBtn.textContent;
-            submitBtn.textContent = 'Sending...';
-            submitBtn.disabled = true;
-            
-            setTimeout(() => {
-                alert('Thank you for your message! I will get back to you soon.');
-                contactForm.reset();
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-            }, 2000);
-        });
-    }
-
     // Dynamic photo gallery management
     function addPhotoToGallery(galleryId, photoSrc, caption) {
         const gallery = document.getElementById(galleryId);
@@ -188,9 +148,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Gallery management functions for easy photo additions
     window.portfolioFunctions = {
-        addAcademicPhoto: (src, caption) => addPhotoToGallery('academicGallery', src, caption),
-        addAthleticPhoto: (src, caption) => addPhotoToGallery('athleticsGallery', src, caption),
-        addVolunteerPhoto: (src, caption) => addPhotoToGallery('volunteeringGallery', src, caption),
+        addInternshipPhoto: (src, caption) => addPhotoToGallery('internshipGallery', src, caption),
+        addServicePhoto: (src, caption) => addPhotoToGallery('serviceGallery', src, caption),
         
         // Function to update profile information
         updateProfile: (data) => {
@@ -205,16 +164,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.querySelector('.bio').textContent = data.bio;
             }
             if (data.email) {
-                document.querySelector('.contact-item span').textContent = data.email;
+                const emailLink = document.querySelector('.contact-item .contact-link');
+                if (emailLink) {
+                    emailLink.textContent = data.email;
+                    emailLink.href = 'mailto:' + data.email;
+                }
             }
         },
         
         // Function to update stats
         updateStats: (stats) => {
             const statNumbers = document.querySelectorAll('.stat-number');
-            if (stats.gpa && statNumbers[0]) statNumbers[0].textContent = stats.gpa;
-            if (stats.volunteerHours && statNumbers[1]) statNumbers[1].textContent = stats.volunteerHours + '+';
-            if (stats.leadership && statNumbers[2]) statNumbers[2].textContent = stats.leadership;
+            if (stats.gradYear && statNumbers[0]) statNumbers[0].textContent = stats.gradYear;
+            if (stats.tracks && statNumbers[1]) statNumbers[1].textContent = stats.tracks;
+            if (stats.internshipHours && statNumbers[2]) statNumbers[2].textContent = stats.internshipHours;
+            if (stats.volunteerHours && statNumbers[3]) statNumbers[3].textContent = stats.volunteerHours + '+';
         }
     };
 
@@ -240,45 +204,29 @@ document.addEventListener('DOMContentLoaded', function() {
     // Removed parallax effect to fix scrolling issues
 
     // Counter animation for stats
+    // Only tiles carrying data-count are animated; text tiles (grad year, tracks)
+    // are left as-is.
     function animateCounters() {
-        // Current order: 0=Weighted GPA, 1=Unweighted GPA, 2=Volunteer Hours, 3=Internship Hours
-        const counters = document.querySelectorAll('.stat-number');
         const speed = 200;
 
-        // Volunteer Hours (index 2)
-        if (counters[2]) {
-            // Check if it ends with +
-            const hasPlus = counters[2].textContent.includes('+');
-            const volTarget = parseInt(counters[2].getAttribute('data-target') || counters[2].textContent.replace(/\D/g, ''));
-            let volCurrent = 0;
-            const volIncrement = volTarget / speed;
-            const volTimer = setInterval(() => {
-                volCurrent += volIncrement;
-                if (volCurrent >= volTarget) {
-                    counters[2].textContent = volTarget + (hasPlus ? '+' : '');
-                    clearInterval(volTimer);
-                } else {
-                    counters[2].textContent = Math.ceil(volCurrent) + (hasPlus ? '+' : '');
-                }
-            }, 1);
-        }
+        document.querySelectorAll('.stat-number[data-count]').forEach(counter => {
+            const target = parseInt(counter.getAttribute('data-count'), 10);
+            if (isNaN(target)) return;
 
-        // Internship Hours (index 3)
-        if (counters[3]) {
-            const internTarget = parseInt(counters[3].getAttribute('data-target') || counters[3].textContent.replace(/\D/g, ''));
-            let internCurrent = 0;
-            const internIncrement = internTarget / speed;
-            const internTimer = setInterval(() => {
-                internCurrent += internIncrement;
-                if (internCurrent >= internTarget) {
-                    counters[3].textContent = internTarget;
-                    clearInterval(internTimer);
+            const suffix = counter.textContent.includes('+') ? '+' : '';
+            const increment = target / speed;
+            let current = 0;
+
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    counter.textContent = target + suffix;
+                    clearInterval(timer);
                 } else {
-                    counters[3].textContent = Math.ceil(internCurrent);
+                    counter.textContent = Math.ceil(current) + suffix;
                 }
             }, 1);
-        }
-        // GPA values (index 0, 1) are left as static text
+        });
     }
 
     // Trigger counter animation when stats section is visible
@@ -299,8 +247,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Console message for developers
 console.log(`
-%c🎓 Aadhavan Sivakumar - College Portfolio
-%cBuilt with modern web technologies
+%c🚀 Aadhavan Sivakumar - Portfolio
+%cPurdue Computer Science | Seeking Summer 2027 Internships
 %cHTML5 • CSS3 • JavaScript • Responsive Design
 `, 
 'color: #3498db; font-size: 18px; font-weight: bold;',

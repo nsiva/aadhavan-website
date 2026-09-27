@@ -1,202 +1,114 @@
-# Aadhavan Sivakumar - College Portfolio Website
+# Aadhavan Sivakumar — Portfolio
 
-A modern, responsive portfolio website designed for college applications. This website showcases academic achievements, athletic accomplishments, volunteer work, and personal profile information.
+A responsive, single-page portfolio site built with vanilla HTML, CSS, and JavaScript. It presents
+projects, experience, education, and leadership for software engineering, AI/ML, and cybersecurity
+internship recruiting.
 
-## 🚀 Features
+## Features
 
-- **Responsive Design**: Works perfectly on desktop, tablet, and mobile devices
-- **Modern UI/UX**: Clean, professional design with smooth animations
-- **Photo Galleries**: Organized sections for academics, athletics, and volunteering photos
-- **Interactive Elements**: Smooth scrolling, modal image viewer, contact form
-- **Performance Optimized**: Fast loading with modern web standards
+- **Responsive design** — single-column layout below 768px, verified down to 320px
+- **Photo galleries** with a click-to-expand image modal
+- **Smooth scrolling** navigation that accounts for the fixed navbar
+- **Scroll animations** via the Intersection Observer API
+- **No build step** — open `index.html` and it runs
 
-## 📁 File Structure
+## File structure
 
 ```
 /
-├── index.html          # Main HTML file
-├── styles.css          # CSS styling
-├── script.js           # JavaScript functionality
-├── images/             # Photo directories
-│   ├── academics/      # Academic achievement photos
-│   ├── athletics/      # Sports and athletic photos
+├── index.html          # All page content
+├── styles.css          # All styling, including responsive breakpoints
+├── script.js           # Navigation, image modal, animations
+├── images/
+│   ├── academics/      # Academic photos (not currently shown on the page)
+│   ├── athletics/      # Cross country photos (not currently shown on the page)
 │   ├── volunteering/   # Community service photos
-│   └── profile.jpg     # Main profile photo
+│   ├── internship/     # Waters Corporation internship photos
+│   └── profile.jpeg    # Hero profile photo
 └── documents/
-    └── resume.pdf      # Resume file
+    └── aadhavan-sivakumar-resume.pdf
 ```
 
-## 📸 Adding Photos
+Images under `academics/` and `athletics/` are retained in the repo but not referenced by the
+current page.
 
-### 1. Profile Photo
-- Add your main profile photo as `images/profile.jpg`
-- Recommended size: 300x300 pixels (square format)
-- Format: JPG or PNG
+## Page sections
 
-### 2. Academic Photos
-Place academic achievement photos in `images/academics/`:
-- `academic1.jpg` - Honor Society, awards ceremonies
-- `academic2.jpg` - Science fair, academic competitions
-- `academic3.jpg` - Math competitions, debates
-- `academic4.jpg` - Academic team photos
+In document order: Hero → About → Skills → Projects → Experience → Education →
+Interests & Goals → Leadership & Service → Contact.
 
-### 3. Athletic Photos
-Place sports photos in `images/athletics/`:
-- `sport1.jpg` - Championship moments
-- `sport2.jpg` - Team captain photos
-- `sport3.jpg` - MVP awards, individual achievements
-- `sport4.jpg` - State competitions, tournaments
+## Local development
 
-### 4. Volunteering Photos
-Place community service photos in `images/volunteering/`:
-- `volunteer1.jpg` - Food bank service
-- `volunteer2.jpg` - Community cleanup events
-- `volunteer3.jpg` - Youth mentoring activities
-- `volunteer4.jpg` - Fundraising events
+No dependencies and no build process. Either open `index.html` directly in a browser, or serve
+the directory:
 
-## ✏️ Customizing Content
+```bash
+python -m http.server 8000
+```
 
-### Personal Information
-Edit the following in `index.html`:
+## Customizing content
 
-1. **Name and Title**: Update the `<h1>` and `<h2>` tags with your name
-2. **Tagline**: Change the tagline in the `.tagline` paragraph
-3. **Bio**: Update the biography in the `.bio` paragraph
-4. **Contact Information**: Update email, phone, and address in the contact section
+Most edits are direct text changes in `index.html`. A few things are worth knowing:
 
-### Academic Achievements
-Update the achievement cards in the academics section:
-- Honor Roll information
-- Specific awards and recognitions
-- Advanced courses taken
+### Stat tiles
 
-### Athletic Accomplishments
-Modify the sports highlights:
-- Specific sports played
-- Championships won
-- Leadership roles
+The four tiles in the About section are plain markup. A tile animates its number on scroll only
+if it carries a `data-count` attribute:
 
-### Volunteer Work
-Update community service information:
-- Organizations volunteered with
-- Types of service performed
-- Impact made
+```html
+<span class="stat-number" data-count="350">350+</span>   <!-- counts up to 350, keeps the "+" -->
+<span class="stat-number stat-number-text">MI + Security</span>  <!-- static text, smaller type -->
+```
 
-### Statistics
-Update the stats section with your actual numbers:
-- GPA
-- Volunteer hours
-- Leadership positions
+### Adding gallery photos
 
-## 🛠️ Technical Customization
-
-### Adding New Photos Programmatically
-Use the JavaScript functions in the browser console:
+Drop the file into the right `images/` subdirectory and add a `.gallery-item` block to the
+relevant gallery, or add one at runtime from the browser console:
 
 ```javascript
-// Add academic photo
-portfolioFunctions.addAcademicPhoto('images/academics/new-photo.jpg', 'Caption');
-
-// Add athletic photo
-portfolioFunctions.addAthleticPhoto('images/athletics/new-photo.jpg', 'Caption');
-
-// Add volunteer photo
-portfolioFunctions.addVolunteerPhoto('images/volunteering/new-photo.jpg', 'Caption');
+portfolioFunctions.addServicePhoto('images/volunteering/new-photo.jpeg', 'Caption');
+portfolioFunctions.addInternshipPhoto('images/internship/new-photo.jpg', 'Caption');
 ```
 
-### Updating Profile Information
+Every image needs descriptive `alt` text — the caption in the hover overlay is not a substitute.
+
+### Updating profile text and stats
+
 ```javascript
 portfolioFunctions.updateProfile({
-    name: 'Your Name',
-    tagline: 'Your Tagline',
-    bio: 'Your Biography',
-    email: 'your.email@example.com'
+    name: 'Aadhavan Sivakumar',
+    tagline: 'Your tagline',
+    bio: 'Your bio',
+    email: 'you@example.com'
 });
-```
 
-### Updating Statistics
-```javascript
 portfolioFunctions.updateStats({
-    gpa: '4.0',
-    volunteerHours: '250',
-    leadership: '6'
+    gradYear: '2030',
+    tracks: 'MI + Security',
+    internshipHours: '120',
+    volunteerHours: '350'
 });
 ```
 
-## 🎨 Color Customization
+These are convenience helpers for live tweaking; they do not persist. Edit `index.html` to make a
+change stick.
 
-To change the color scheme, modify these CSS variables in `styles.css`:
+## Colors
 
-```css
-:root {
-    --primary-color: #3498db;    /* Main blue color */
-    --secondary-color: #9b59b6;  /* Purple accent */
-    --text-color: #2c3e50;       /* Dark text */
-    --light-bg: #f8f9fa;         /* Light background */
-}
-```
+Colors are literal hex values in `styles.css`, not custom properties. The recurring ones are
+`#3498db` (primary blue), `#9b59b6` (purple accent, used in gradients), `#2c3e50` (heading text),
+and `#f8f9fa` (light section background). Changing the scheme means a find-and-replace across
+`styles.css`.
 
-## 📱 Mobile Optimization
+## Deployment
 
-The website is fully responsive and includes:
-- Mobile-friendly navigation menu
-- Optimized layouts for small screens
-- Touch-friendly interactive elements
-- Fast loading on mobile networks
+Static site — any static host works. Deploy the repository root as-is; all asset paths are
+relative.
 
-## 🚀 Deployment
+- **GitHub Pages**: enable Pages in repository settings, serving from the default branch
+- **Cloudflare Pages / Netlify**: connect the repository, no build command, publish directory `/`
 
-### Option 1: GitHub Pages
-1. Create a GitHub repository
-2. Upload all files to the repository
-3. Enable GitHub Pages in repository settings
-4. Your site will be available at `https://yourusername.github.io/repository-name`
+## Browser support
 
-### Option 2: Netlify
-1. Create a Netlify account
-2. Drag and drop your project folder to Netlify
-3. Your site will be deployed automatically
-
-### Option 3: Traditional Web Hosting
-1. Upload all files to your web hosting provider
-2. Ensure the main file is named `index.html`
-
-## 📄 Resume Integration
-
-1. Convert your resume to PDF format
-2. Save it as `documents/resume.pdf`
-3. The download button in the hero section will automatically link to it
-
-## 🔧 Browser Compatibility
-
-- Chrome (recommended)
-- Firefox
-- Safari
-- Edge
-- Mobile browsers (iOS Safari, Chrome Mobile)
-
-## 📞 Support
-
-If you need help customizing the website:
-1. Check the console for any JavaScript errors
-2. Ensure all image files are properly named and placed
-3. Validate HTML/CSS syntax if making manual changes
-
-## 🎯 Tips for College Applications
-
-1. **High-Quality Photos**: Use professional or high-quality photos
-2. **Authentic Content**: Showcase genuine achievements and experiences
-3. **Regular Updates**: Keep content current throughout application season
-4. **Professional Email**: Use a professional email address
-5. **Proofread**: Double-check all text for spelling and grammar
-
-## 📈 Performance Tips
-
-- Optimize images (compress without losing quality)
-- Use WebP format for better compression
-- Keep image files under 1MB each
-- Test website speed regularly
-
----
-
-*Created for college application portfolio purposes. Good luck with your applications!*
+Modern Chrome, Firefox, Safari, and Edge, plus iOS Safari and Chrome Mobile. Uses CSS Grid,
+Flexbox, and ES6+ JavaScript.
