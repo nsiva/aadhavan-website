@@ -99,27 +99,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Profile photo upload functionality
-    const profilePhoto = document.getElementById('profilePhoto');
-    if (profilePhoto) {
-        profilePhoto.addEventListener('click', function() {
-            const input = document.createElement('input');
-            input.type = 'file';
-            input.accept = 'image/*';
-            input.addEventListener('change', function(e) {
-                const file = e.target.files[0];
-                if (file) {
-                    const reader = new FileReader();
-                    reader.onload = function(e) {
-                        profilePhoto.src = e.target.result;
-                    };
-                    reader.readAsDataURL(file);
-                }
-            });
-            input.click();
-        });
-    }
-
     // Dynamic photo gallery management
     function addPhotoToGallery(galleryId, photoSrc, caption) {
         const gallery = document.getElementById(galleryId);

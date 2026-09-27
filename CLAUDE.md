@@ -60,8 +60,6 @@ This is a static website with no build process. To work with the code:
 - **Mobile Navigation**: Hamburger menu with toggle functionality
 - **Smooth Scrolling**: Offset-aware navigation for fixed header
 - **Image Modals**: Click-to-expand gallery functionality
-- **Profile Photo Swap**: Clicking the hero photo opens a local file picker and replaces the image
-  in-page only (an authoring convenience; nothing is uploaded or persisted)
 - **Scroll Effects**: Dynamic navbar styling based on scroll position
 - **Intersection Observer**: Animate elements as they enter viewport
 
